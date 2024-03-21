@@ -22,7 +22,6 @@ jobs:
         - 
           name: Valor a variable
           run: echo "GITHUB_ALLOWED=$(echo ${{ steps.allow_pull.outputs.files == 'allow_pull_request.txt' }})" >> $GITHUB_ENV
-          # run: echo ${{ steps.allow_pull.outputs.files == 'allow_pull_request.txt' }}
         -
           name: Archivo existe
           if: ${{ env.GITHUB_ALLOWED == 'true' }}
